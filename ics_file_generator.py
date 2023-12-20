@@ -31,11 +31,24 @@ def generate_ics_file(subject, location, description, start_time, end_time):
 
     print('ICS file generated successfully.')
 
-# Example usage
-subject = 'Meeting with Team'
-location = 'Conference Room 101'
-description = 'Discuss project updates and future plans.'
-start_time = '2023-01-01 09:00:00'
-end_time = '2023-01-01 10:30:00'
 
-generate_ics_file(subject, location, description, start_time, end_time)
+def main():
+    # Example usage
+    subject = 'Meeting with Team'
+    location = 'Conference Room 101'
+    description = 'Discuss project updates and future plans.'
+    start_time = '2023-01-01 09:00:00'
+    end_time = '2023-01-01 10:30:00'
+
+    # Get event details from the user
+    subject = input('Enter the event subject: ')
+    location = input('Enter the event location: ')
+    description = input('Enter the event description: ')
+    start_time = input('Enter the event start time (YYYY-MM-DD HH:MM:SS): ')
+    end_time = input('Enter the event end time (YYYY-MM-DD HH:MM:SS): ')
+
+    # Generate ICS file
+    generate_ics_file(subject, location, description, start_time, end_time)
+
+if __name__ == "__main__":
+    main()
